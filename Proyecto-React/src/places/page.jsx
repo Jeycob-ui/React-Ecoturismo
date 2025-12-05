@@ -1,29 +1,3 @@
-// import React from "react";
-// import Footer from "../../components/Footer/Footer";
-// import "./page.css";
-
-// const PlacesPage = () => {
-//   return (
-//     <div className="places-container">
-//       <div className="places-content">
-//         <h1 className="places-title">Algunos Lugares</h1>
-//         <div className="places-grid">
-//           {/* Aquí puedes agregar tus tarjetas de lugares */}
-//           <div className="place-card">
-//             <img src="/path-to-your-image.jpg" alt="Lugar turístico" />
-//             <h3>Nombre del Lugar</h3>
-//             <p>Descripción breve del lugar turístico...</p>
-//           </div>
-//           {/* Puedes duplicar place-card para más lugares */}
-//         </div>
-//       </div>
-//       {/* <Footer /> */}
-//     </div>
-//   );
-// };
-
-// export default PlacesPage;
-
 import React from "react";
 import { Link } from "react-router-dom";
 import "./page.css";

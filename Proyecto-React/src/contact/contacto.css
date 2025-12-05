@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
   margin: 0;
@@ -7,7 +7,7 @@
 }
 
 body, input, textarea {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .container {
@@ -71,7 +71,7 @@ body, input, textarea {
   animation: subeybaja 2s infinite alternate;
 }
 
-.contact-form::before {
+.contact-form:before {
   content: "";
   position: absolute;
   width: 26px;
@@ -89,7 +89,6 @@ form {
   position: relative;
 }
 
-/* TU CLASE .tittle DEL JSX */
 .tittle {
   color: #0b0a0a;
   font-weight: 500;
@@ -150,7 +149,9 @@ textarea.input {
   border: 2px solid #fafafa;
   font-size: 0.95rem;
   color: #2ecc71;
+  line-height: 1;
   border-radius: 25px;
+  outline: none;
   cursor: pointer;
   transition: 0.3s;
   margin-top: 25px;
@@ -175,7 +176,7 @@ textarea.input {
   z-index: 500;
 }
 
-.input-container span::before,
+.input-container span:before,
 .input-container span::after {
   content: "";
   position: absolute;
@@ -188,11 +189,11 @@ textarea.input {
   transform: translateY(-50%);
 }
 
-.input-container span::before {
+.input-container span:before {
   left: 50%;
 }
 
-.input-container span::after {
+.input-container span:after {
   right: 50%;
 }
 
@@ -203,14 +204,13 @@ textarea.input {
   font-size: 0.8rem;
 }
 
-.input-container.focus span::before,
+.input-container.focus span:before,
 .input-container.focus span::after {
   width: 50%;
   opacity: 1;
 }
 
-/* COLUMNA IZQUIERDA */
-
+/* --- INFORMACIÓN Y CONTACTO --- */
 .contact-info {
   padding: 2.3rem 2.2rem;
   position: relative;
@@ -239,7 +239,9 @@ textarea.input {
   margin-right: 0.7rem;
 }
 
+/* ICONOS DE REDES */
 .social-media {
+  position: relative;
   margin-top: 34px;
   display: flex;
   flex-direction: column;
@@ -258,6 +260,8 @@ textarea.input {
 }
 
 #volver {
+  margin-top: 97px;
+  margin-left: 130px;
   padding: 0.6rem 1.3rem;
   background-color: black;
   border: 2px solid #fafafa;
@@ -266,20 +270,17 @@ textarea.input {
   border-radius: 25px;
   cursor: pointer;
   transition: transform 0.3s;
-  text-align: center;
-  margin-top: 97px;
-  margin-left: 130px;
 }
 
 #volver a {
   text-decoration: none;
-  color: #fff;
+  color: white;
 }
 
 #volver:hover {
   border: 1px solid black;
   transform: scale(1.1);
-  background-color: #fff;
+  background-color: white;
   color: black;
 }
 
@@ -293,14 +294,20 @@ textarea.input {
   letter-spacing: 1px;
 }
 
+/* ANIMACIÓN */
 @keyframes subeybaja {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
-  100% { transform: translateX(-10px); }
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
 }
 
-/* RESPONSIVE */
-
+/* ---------- RESPONSIVE ---------- */
 @media (max-width: 850px) {
   .container {
     max-height: 300vh !important;
@@ -308,6 +315,17 @@ textarea.input {
 
   .form {
     grid-template-columns: 1fr;
+  }
+
+  .contact-info:before {
+    top: -75px;
+    right: 65px;
+    transform: scale(0.95);
+  }
+
+  .contact-form:before {
+    top: -13px;
+    right: 70px;
   }
 
   .text {
@@ -335,7 +353,7 @@ textarea.input {
     font-size: 0.8rem;
   }
 
-  .tittle {
+  .title {
     font-size: 1.15rem;
   }
 
