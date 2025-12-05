@@ -10,9 +10,10 @@ import PagLogueados from "./pagLogueados.jsx";
 import Comments2Page from "./comments2/page.jsx";
 
 // NUEVAS PÁGINAS
-import ParaisosAcuaticos from "./places2/paraisosAcuaticos/Page.jsx";
+import ParaisosAcuaticos from "./places2/paraisosAcuaticos/page.jsx";
 import LugaresMontanosos from "./places2/lugaresMontanosos/page.jsx";
-import TerritoriosDelCafe from "./places2/territoriosDelCafe/Page.jsx";
+import ParquesYMas from "./places2/parquesYMas/page.jsx";
+import TerritoriosDelCafe from "./places2/territoriosDelCafe/page.jsx";
 
 
 const router = createBrowserRouter([
@@ -49,14 +50,18 @@ const router = createBrowserRouter([
     element: <PagLogueados />,
   },
 
-  // 🌿 NUEVAS RUTAS DEL MENÚ LUGARES
+  // 🌿 RUTAS DEL MENÚ LUGARES
   {
     path: "/paraisosAcuaticos",
     element: <ParaisosAcuaticos />,
   },
   {
     path: "/lugaresMontanosos",
-    element: <lugaresMontanosos />,
+    element: <LugaresMontanosos />,
+  },
+  {
+    path: "/parquesYMas",
+    element: <ParquesYMas />,
   },
   {
     path: "/territoriosDelCafe",

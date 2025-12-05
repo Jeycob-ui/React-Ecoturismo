@@ -3,74 +3,58 @@ import Header2 from "../../../components/Header2/Header2";
 import Footer from "../../../components/Footer/Footer";
 import "./lugares.css";
 
-export default function LugaresMontanososPage() {
+export default function ParquesYMasPage() {
   const [favoritos, setFavoritos] = useState([]);
   const [popupVisible, setPopupVisible] = useState(false);
 
   const lugares = [
     {
       id: 1,
-      titulo: "Alto Del Nudo",
-      ubicacion: "Pereira, Risaralda",
-      descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-      imagen: "https://picsum.photos/id/1035/400/300",
-      mapa: "https://maps.app.goo.gl/f3w9DC9zRFUMDEzv9",
+      titulo: "Parque Nacional Natural Tatamá",
+      ubicacion: "Pueblo Rico, Risaralda",
+      descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      imagen: "https://picsum.photos/id/1015/400/300",
+      mapa: "https://maps.app.goo.gl/hPSphPUBmXGBqeGJ6",
     },
     {
       id: 2,
-      titulo: "Alto Del Toro",
-      ubicacion: "Pereira, Risaralda",
-      descripcion: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
-      imagen: "https://picsum.photos/id/1036/400/300",
-      mapa: "https://maps.app.goo.gl/DyrpMApsB3Mz1hmV6",
+      titulo: "Parque Las Araucarias",
+      ubicacion: "Santa Rosa de Cabal, Risaralda",
+      descripcion: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      imagen: "https://picsum.photos/id/1018/400/300",
+      mapa: "https://maps.app.goo.gl/SDZUo3UZpzU3YWq28",
     },
     {
       id: 3,
-      titulo: "La Divisa De Don Juan",
-      ubicacion: "Vía Altagracia, Altagracia, Pereira, Risaralda",
-      descripcion: "Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      imagen: "https://picsum.photos/id/1037/400/300",
-      mapa: "https://maps.app.goo.gl/7seGQZ2LHdAMoNqJ6",
+      titulo: "Parque Regional Natural Cuchilla de San Juan",
+      ubicacion: "Belén de Umbría, Risaralda",
+      descripcion: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      imagen: "https://picsum.photos/id/1020/400/300",
+      mapa: "https://maps.app.goo.gl/2uWtBq8BNCCHuCft9",
     },
     {
       id: 4,
-      titulo: "Cerro Batero",
-      ubicacion: "Quinchía, Risaralda",
-      descripcion: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.",
-      imagen: "https://picsum.photos/id/1038/400/300",
-      mapa: "https://maps.app.goo.gl/q6mCEfzAjGfJkuh56",
+      titulo: "Parque Natural Regional Santa Emilia",
+      ubicacion: "Belén de Umbría, Risaralda",
+      descripcion: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      imagen: "https://picsum.photos/id/1021/400/300",
+      mapa: "https://maps.app.goo.gl/5G6AXY18b8hAwdfW6",
     },
     {
       id: 5,
-      titulo: "Reserva Forestal La Nona",
-      ubicacion: "Marsella, Risaralda",
-      descripcion: "Veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
-      imagen: "https://picsum.photos/id/1039/400/300",
-      mapa: "https://maps.app.goo.gl/XacC2ScWUKbcgutv8",
+      titulo: "Jardín Botánico UTP",
+      ubicacion: "Pereira, Risaralda",
+      descripcion: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+      imagen: "https://picsum.photos/id/1022/400/300",
+      mapa: "https://maps.app.goo.gl/hhkmfB9owU9PcB6Z7",
     },
     {
       id: 6,
-      titulo: "Reserva Natural Cerro Gobia",
-      ubicacion: "Quinchía, Risaralda",
-      descripcion: "Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.",
-      imagen: "https://picsum.photos/id/1040/400/300",
-      mapa: "https://maps.app.goo.gl/8BF3SXF4RTpRbVxeA",
-    },
-    {
-      id: 7,
-      titulo: "Kaukitá Bosque Reserva",
-      ubicacion: "Pereira, Risaralda",
-      descripcion: "Consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
-      imagen: "https://picsum.photos/id/1041/400/300",
-      mapa: "https://maps.app.goo.gl/K3C93FAURYARtAvv6",
-    },
-    {
-      id: 8,
-      titulo: "Reserva Natural DMI Agualinda",
-      ubicacion: "Apía, Risaralda",
-      descripcion: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.",
-      imagen: "https://picsum.photos/id/1042/400/300",
-      mapa: "https://maps.app.goo.gl/UNc9cTccV6LuGySU7",
+      titulo: "Jardín Botánico De Marsella",
+      ubicacion: "Marsella, Risaralda",
+      descripcion: "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.",
+      imagen: "https://picsum.photos/id/1023/400/300",
+      mapa: "https://maps.app.goo.gl/L2ysAcHE6EvuNq3U7",
     },
   ];
 
@@ -90,7 +74,7 @@ export default function LugaresMontanososPage() {
     <>
       <Header2 />
       <div className="contenedorTodo" style={{ marginTop: "100px" }}>
-        <h1>Lugares Montañosos</h1>
+        <h1>Parques y Más</h1>
 
         <button 
           className="mostrar-favoritos" 
@@ -176,3 +160,4 @@ export default function LugaresMontanososPage() {
     </>
   );
 }
+

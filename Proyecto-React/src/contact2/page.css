@@ -10,16 +10,16 @@ body, input, textarea {
   font-family: 'Poppins', sans-serif;
 }
 
-.container {
+.container-contact {
   position: relative;
   width: 100%;
-  max-height: 100vh;
-  min-height: 100vh;
-  background-color: white;
+  min-height: calc(100vh - 180px);
+  background-color: #f5f6fa;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 40px 20px;
 }
 
 .information a {
@@ -197,17 +197,32 @@ textarea.input {
   right: 50%;
 }
 
-.input-container.focus label {
+.input-container input:focus ~ label,
+.input-container input:valid ~ label,
+.input-container textarea:focus ~ label,
+.input-container textarea:valid ~ label {
   top: 0;
   transform: translateY(-50%);
   left: 25px;
   font-size: 0.8rem;
+  color: #27ae60;
 }
 
-.input-container.focus span:before,
-.input-container.focus span::after {
+.input-container input:focus ~ span:before,
+.input-container input:focus ~ span:after,
+.input-container input:valid ~ span:before,
+.input-container input:valid ~ span:after,
+.input-container textarea:focus ~ span:before,
+.input-container textarea:focus ~ span:after,
+.input-container textarea:valid ~ span:before,
+.input-container textarea:valid ~ span:after {
   width: 50%;
   opacity: 1;
+}
+
+.input-container input:focus,
+.input-container textarea:focus {
+  border-color: #27ae60;
 }
 
 /* --- INFORMACIÓN Y CONTACTO --- */
@@ -259,34 +274,6 @@ textarea.input {
   transition: 0.3s;
 }
 
-#volver {
-  margin-top: 97px;
-  margin-left: 130px;
-  padding: 0.6rem 1.3rem;
-  background-color: black;
-  border: 2px solid #fafafa;
-  font-size: 0.95rem;
-  color: white;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-#volver a {
-  text-decoration: none;
-  color: white;
-}
-
-#volver:hover {
-  border: 1px solid black;
-  transform: scale(1.1);
-  background-color: white;
-  color: black;
-}
-
-#volver:hover a {
-  color: black;
-}
 
 .copyright {
   color: #070707;
@@ -373,10 +360,5 @@ textarea.input {
 @media (min-width: 851px) {
   .contact-info {
     margin-bottom: 20px;
-  }
-
-  #volver {
-    position: relative;
-    bottom: 50px;
   }
 }

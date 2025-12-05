@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import icono from "../../components/imagenes/iconoecoturismo.jpg";
+import "./Header2.css";
 
 const Header2 = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -23,18 +24,23 @@ const Header2 = () => {
     };
   }, []);
 
+  // Cierra el menú al hacer clic en un enlace
+  const handleLinkClick = () => {
+    setOpenMenu(false);
+  };
+
   return (
     <header>
       <div className="header-container">
-        <div className="logo-principal">
+        <Link to="/pagLogueados" className="logo-principal">
           <img src={icono} alt="Logo" width="60" />
           <div className="titulos">
             <h2 className="risaralda">RisaraldaEcoTurismo</h2>
           </div>
-        </div>
+        </Link>
 
         <nav className="navbar">
-          <Link to="/comments2">Reseñas</Link>
+          <Link to="/comments2" className="nav-link">Reseñas</Link>
 
           {/* Menú desplegable de Lugares */}
           <div className="dropdown" ref={dropdownRef}>
@@ -50,26 +56,38 @@ const Header2 = () => {
             {openMenu && (
               <ul className="dropdown-menu" role="menu">
                 <li>
-                  <Link to="/paraisosAcuaticos" role="menuitem">
-                    <span className="icono">🏖️</span> Paraísos Acuáticos
+                  <Link 
+                    to="/paraisosAcuaticos" 
+                    role="menuitem"
+                    onClick={handleLinkClick}
+                  >
+                    <span className="icono">🏖️</span> Lugares Acuáticos
                   </Link>
                 </li>
                 <li>
-                  <Link to="/lugaresMontanosos" role="menuitem">
-                    <span className="icono">🏞️</span> Parques y Más…
+                  <Link 
+                    to="/lugaresMontanosos" 
+                    role="menuitem"
+                    onClick={handleLinkClick}
+                  >
+                    <span className="icono">⛰️</span> Lugares Montañosos
                   </Link>
                 </li>
                 <li>
-                  <Link to="/territoriosDelCafe" role="menuitem">
-                    <span className="icono">☕</span> Territorios del Café
+                  <Link 
+                    to="/parquesYMas" 
+                    role="menuitem"
+                    onClick={handleLinkClick}
+                  >
+                    <span className="icono">🏞️</span> Parques y Más
                   </Link>
                 </li>
               </ul>
             )}
           </div>
 
-          <Link to="/contact2">Contacto</Link>
-          <Link to="/login">👤 Perfil</Link>
+          <Link to="/contact2" className="nav-link">Contacto</Link>
+          <Link to="/login" className="nav-link">👤 Perfil</Link>
         </nav>
       </div>
     </header>
